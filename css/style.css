@@ -156,6 +156,7 @@ body {
 
   .conteudo{
     justify-items: center;
+    width: 500px;
   }
 
   .posts .post{
