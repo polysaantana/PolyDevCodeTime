@@ -14,16 +14,6 @@ body {
   margin: 0 auto 1px;
 }
 
-.topo {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.topo img{
-  width: 1000px;
-  height: 0 au;
-}
-
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -95,11 +85,6 @@ body {
   width: 298px;
   height: 184px;
   object-fit: cover;
-  /* como a imagem original não tem dimensões 298x184
-   * ou outra resolução com mesma proporção, ela ficaria
-   * esticada. o object-fit: cover impede que ela seja
-   * esticada, e corta a imagem de forma que caiba nas
-   * dimensões especificadas aqui no CSS */
 }
 
 .posts .post:hover {
@@ -118,7 +103,7 @@ body {
 }
 
 .top{
-  background: #333333;
+  background: #ffffff;
 }
 
 @media screen and (min-width: 769px) {
@@ -128,9 +113,10 @@ body {
 
   .menu {
     display: flex;
-    flex-wrap: wrap;
     position: fixed;
     width: 100%;
+    
+    
   }
 }
 
@@ -138,16 +124,52 @@ body {
 @media screen and (max-width: 768px) {
   .website {
     width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .menu{
+    width:100%; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: fixed;
+  }
+ 
+  .posts .post img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .posts .post1 img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+  }
+   .posts{
+    width: 100%; 
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
-  .menu {
-    width: 100%;
-    flex-direction: column;
-    position: fixed; 
-    top: 0;
-    left: 0;
+  .conteudo{
+    justify-items: center;
   }
+
+  .posts .post{
+    width: 100%;
+    justify-items: center;
+  }
+
+  .posts .post .clonetinder{
+    margin-top: 200px;
+  }
+ 
 }
+  
+
 
  a{
   text-decoration: none;
@@ -156,4 +178,5 @@ body {
 
  .posts {
   margin-top: 60px; 
+  
 }
