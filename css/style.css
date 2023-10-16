@@ -27,6 +27,7 @@ body {
 .menu {
   display: flex;
   flex-wrap: wrap;
+  position: fixed;
 }
 
 .menu .item {
@@ -120,16 +121,39 @@ body {
   background: #333333;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) {
   .website {
-    width: 100%;} }
+    width: 100%;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
-.menu {
-    width: 60%;
-    flex-direction: column;} }
+  .website {
+    width: 100%;
+  }
+
+  .menu {
+    width: 100%;
+    flex-direction: column;
+    position: fixed; 
+    top: 0;
+    left: 0;
+  }
+}
 
  a{
   text-decoration: none;
   color: black;
  }
+
+ .posts {
+  margin-top: 60px; 
+}
